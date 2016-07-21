@@ -14,7 +14,8 @@
         "jlapp/swaggervel": "dev-master",
         "doctrine/dbal": "~2.3",
         "infyomlabs/generator-builder": "dev-master",
-        "yajra/laravel-datatables-oracle": "~6.0"
+        "yajra/laravel-datatables-oracle": "~6.0",
+        "tymon/jwt-auth": "*"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
