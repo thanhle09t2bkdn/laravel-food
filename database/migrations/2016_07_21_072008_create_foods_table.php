@@ -17,11 +17,17 @@ class CreatefoodsTable extends Migration
             $table->increments('id');
             $table->string('name');
             $table->string('image');
-            $table->integer('category_id');
+            $table->integer('category_id')->unsigned();
             $table->text('content');
-            $table->integer('author');
+            $table->integer('author')->unsigned();
             $table->timestamps();
             $table->softDeletes();
+            $table->foreign('category_id')
+                    ->references('id')->on('categories')
+                    ->onDelete('cascade');
+            $table->foreign('author')
+                    ->references('id')->on('users')
+                    ->onDelete('cascade');
         });
     }
 
