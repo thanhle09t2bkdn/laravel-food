@@ -56,11 +56,6 @@ Route::post('password/reset', 'Auth\PasswordController@postReset');
 
 Route::get('/home', 'HomeController@index');
 
-
-Route::resource('categories', 'CategoryController');
-
-Route::resource('categories', 'CategoryController');
-
 Route::resource('categories', 'CategoryController');
 
 Route::resource('foods', 'FoodController');

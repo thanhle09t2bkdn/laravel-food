@@ -165,6 +165,7 @@ return [
         \InfyOm\Generator\InfyOmGeneratorServiceProvider::class,
         InfyOm\AdminLTETemplates\AdminLTETemplatesServiceProvider::class,
         \InfyOm\GeneratorBuilder\GeneratorBuilderServiceProvider::class,
+        Jlapp\Swaggervel\SwaggervelServiceProvider::class
 
     ],
 
