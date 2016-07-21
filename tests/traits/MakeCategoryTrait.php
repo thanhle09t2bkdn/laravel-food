@@ -43,9 +43,7 @@ trait MakeCategoryTrait
 
         return array_merge([
             'name' => $fake->word,
-            'image' => $fake->word,
-            'created_at' => $fake->word,
-            'updated_at' => $fake->word
+            'image' => $fake->word
         ], $categoryFields);
     }
 }

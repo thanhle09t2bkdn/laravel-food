@@ -4,6 +4,13 @@
     {!! Form::text('name', null, ['class' => 'form-control']) !!}
 </div>
 
+<!-- Image Field -->
+<div class="form-group col-sm-6">
+    {!! Form::label('image', 'Image:') !!}
+    {!! Form::file('image') !!}
+</div>
+<div class="clearfix"></div>
+
 <!-- Category Id Field -->
 <div class="form-group col-sm-6">
     {!! Form::label('category_id', 'Category Id:') !!}
@@ -13,14 +20,13 @@
 <!-- Content Field -->
 <div class="form-group col-sm-12 col-lg-12">
     {!! Form::label('content', 'Content:') !!}
-    {!! Form::textarea('content', null, ['class' => 'form-control', 'rows' => '5']) !!}
+    {!! Form::textarea('content', null, ['class' => 'form-control']) !!}
 </div>
 
-
-<!-- Image Field -->
+<!-- Author Field -->
 <div class="form-group col-sm-6">
-    {!! Form::label('image', 'Image:') !!}
-    {!! Form::text('image', null, ['class' => 'form-control']) !!}
+    {!! Form::label('author', 'Author:') !!}
+    {!! Form::text('author', null, ['class' => 'form-control']) !!}
 </div>
 
 <!-- Submit Field -->

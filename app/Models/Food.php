@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 /**
  * @SWG\Definition(
  *      definition="Food",
- *      required={name, category_id, content, image},
+ *      required={name, image, category_id, content, author},
  *      @SWG\Property(
  *          property="id",
  *          description="id",
@@ -18,6 +18,11 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  *      @SWG\Property(
  *          property="name",
  *          description="name",
+ *          type="string"
+ *      ),
+ *      @SWG\Property(
+ *          property="image",
+ *          description="image",
  *          type="string"
  *      ),
  *      @SWG\Property(
@@ -32,21 +37,10 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  *          type="string"
  *      ),
  *      @SWG\Property(
- *          property="image",
- *          description="image",
- *          type="string"
- *      ),
- *      @SWG\Property(
- *          property="created_at",
- *          description="created_at",
- *          type="string",
- *          format="date-time"
- *      ),
- *      @SWG\Property(
- *          property="updated_at",
- *          description="updated_at",
- *          type="string",
- *          format="date-time"
+ *          property="author",
+ *          description="author",
+ *          type="integer",
+ *          format="int32"
  *      )
  * )
  */
@@ -62,9 +56,10 @@ class Food extends Model
 
     public $fillable = [
         'name',
+        'image',
         'category_id',
         'content',
-        'image'
+        'author'
     ];
 
     /**
@@ -74,9 +69,10 @@ class Food extends Model
      */
     protected $casts = [
         'name' => 'string',
+        'image' => 'string',
         'category_id' => 'integer',
         'content' => 'string',
-        'image' => 'string'
+        'author' => 'integer'
     ];
 
     /**
@@ -86,8 +82,9 @@ class Food extends Model
      */
     public static $rules = [
         'name' => 'required',
+        'image' => 'required',
         'category_id' => 'required',
         'content' => 'required',
-        'image' => 'required'
+        'author' => 'required'
     ];
 }

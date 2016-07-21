@@ -1,19 +1,24 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="row">
-        <div class="col-sm-12">
-            <h1 class="pull-left">Create New Page</h1>
-        </div>
-    </div>
-
+    <section class="content-header">
+        <h1>
+            Page
+        </h1>
+    </section>
+    <div class="content">
         @include('adminlte-templates::common.errors')
+        <div class="box box-primary">
 
-    <div class="row">
-        {!! Form::open(['route' => 'pages.store']) !!}
+            <div class="box-body">
+                <div class="row">
+                    {!! Form::open(['route' => 'pages.store']) !!}
 
-            @include('pages.fields')
+                        @include('pages.fields')
 
-        {!! Form::close() !!}
+                    {!! Form::close() !!}
+                </div>
+            </div>
+        </div>
     </div>
 @endsection

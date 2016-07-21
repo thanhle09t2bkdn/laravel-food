@@ -10,6 +10,12 @@
     <p>{!! $food->name !!}</p>
 </div>
 
+<!-- Image Field -->
+<div class="form-group">
+    {!! Form::label('image', 'Image:') !!}
+    <p>{!! $food->image !!}</p>
+</div>
+
 <!-- Category Id Field -->
 <div class="form-group">
     {!! Form::label('category_id', 'Category Id:') !!}
@@ -22,21 +28,9 @@
     <p>{!! $food->content !!}</p>
 </div>
 
-<!-- Image Field -->
+<!-- Author Field -->
 <div class="form-group">
-    {!! Form::label('image', 'Image:') !!}
-    <p>{!! $food->image !!}</p>
-</div>
-
-<!-- Created At Field -->
-<div class="form-group">
-    {!! Form::label('created_at', 'Created At:') !!}
-    <p>{!! $food->created_at !!}</p>
-</div>
-
-<!-- Updated At Field -->
-<div class="form-group">
-    {!! Form::label('updated_at', 'Updated At:') !!}
-    <p>{!! $food->updated_at !!}</p>
+    {!! Form::label('author', 'Author:') !!}
+    <p>{!! $food->author !!}</p>
 </div>
 

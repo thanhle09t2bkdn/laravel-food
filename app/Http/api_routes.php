@@ -13,13 +13,13 @@
 
 
 
-Route::resource('categories', 'CategoriesAPIController');
-
-Route::resource('foods', 'FoodAPIController');
 
 Route::resource('categories', 'CategoryAPIController');
 
+Route::resource('categories', 'CategoryAPIController');
+
+Route::resource('categories', 'CategoryAPIController');
+
+Route::resource('foods', 'FoodAPIController');
 
 Route::resource('pages', 'PageAPIController');
-
-Route::resource('orders', 'OrderAPIController');

@@ -1,19 +1,24 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="row">
-        <div class="col-sm-12">
-            <h1 class="pull-left">Create New Category</h1>
+    <section class="content-header">
+        <h1>
+            Category
+        </h1>
+    </section>
+    <div class="content">
+        @include('adminlte-templates::common.errors')
+        <div class="box box-primary">
+
+            <div class="box-body">
+                <div class="row">
+                    {!! Form::open(['route' => 'categories.store']) !!}
+
+                        @include('categories.fields')
+
+                    {!! Form::close() !!}
+                </div>
+            </div>
         </div>
-    </div>
-
-    @include('core-templates::common.errors')
-
-    <div class="row">
-        {!! Form::open(['route' => 'categories.store']) !!}
-
-            @include('categories.fields')
-
-        {!! Form::close() !!}
     </div>
 @endsection

@@ -12,9 +12,10 @@ class FoodRepository extends BaseRepository
      */
     protected $fieldSearchable = [
         'name',
+        'image',
         'category_id',
         'content',
-        'image'
+        'author'
     ];
 
     /**

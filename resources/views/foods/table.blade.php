@@ -1,18 +1,20 @@
 <table class="table table-responsive" id="foods-table">
     <thead>
         <th>Name</th>
+        <th>Image</th>
         <th>Category Id</th>
         <th>Content</th>
-        <th>Image</th>
+        <th>Author</th>
         <th colspan="3">Action</th>
     </thead>
     <tbody>
     @foreach($foods as $food)
         <tr>
             <td>{!! $food->name !!}</td>
+            <td>{!! $food->image !!}</td>
             <td>{!! $food->category_id !!}</td>
             <td>{!! $food->content !!}</td>
-            <td>{!! $food->image !!}</td>
+            <td>{!! $food->author !!}</td>
             <td>
                 {!! Form::open(['route' => ['foods.destroy', $food->id], 'method' => 'delete']) !!}
                 <div class='btn-group'>

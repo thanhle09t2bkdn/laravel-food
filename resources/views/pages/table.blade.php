@@ -1,6 +1,5 @@
 <table class="table table-responsive" id="pages-table">
     <thead>
-        <th>Id</th>
         <th>Name</th>
         <th>Content</th>
         <th colspan="3">Action</th>
@@ -8,7 +7,6 @@
     <tbody>
     @foreach($pages as $page)
         <tr>
-            <td>{!! $page->id !!}</td>
             <td>{!! $page->name !!}</td>
             <td>{!! $page->content !!}</td>
             <td>

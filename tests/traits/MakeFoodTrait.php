@@ -43,11 +43,10 @@ trait MakeFoodTrait
 
         return array_merge([
             'name' => $fake->word,
+            'image' => $fake->word,
             'category_id' => $fake->randomDigitNotNull,
             'content' => $fake->text,
-            'image' => $fake->word,
-            'created_at' => $fake->word,
-            'updated_at' => $fake->word
+            'author' => $fake->randomDigitNotNull
         ], $foodFields);
     }
 }

@@ -17,7 +17,6 @@ Route::get('/', function () {
 
 Route::auth();
 
-Route::get('/home', 'HomeController@index');
 
 
 /*
@@ -33,9 +32,6 @@ Route::group(['prefix' => 'api', 'namespace' => 'API'], function () {
 });
 
 
-Route::resource('categories', 'CategoriesController');
-
-Route::resource('foods', 'FoodController');
 
 Route::get('generator_builder', '\InfyOm\GeneratorBuilder\Controllers\GeneratorBuilderController@builder');
 
@@ -43,11 +39,6 @@ Route::get('field_template', '\InfyOm\GeneratorBuilder\Controllers\GeneratorBuil
 
 Route::post('generator_builder/generate', '\InfyOm\GeneratorBuilder\Controllers\GeneratorBuilderController@generate');
 
-Route::resource('categories', 'CategoryController');
-
-Route::resource('tests', 'TestController');
-
-Route::resource('pages', 'PageController');
 
 Route::get('login', 'Auth\AuthController@getLogin');
 Route::post('login', 'Auth\AuthController@postLogin');
@@ -65,4 +56,13 @@ Route::post('password/reset', 'Auth\PasswordController@postReset');
 
 Route::get('/home', 'HomeController@index');
 
-Route::resource('orders', 'OrderController');
+
+Route::resource('categories', 'CategoryController');
+
+Route::resource('categories', 'CategoryController');
+
+Route::resource('categories', 'CategoryController');
+
+Route::resource('foods', 'FoodController');
+
+Route::resource('pages', 'PageController');

@@ -16,9 +16,10 @@ class CreatefoodsTable extends Migration
         Schema::create('foods', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
+            $table->string('image');
             $table->integer('category_id');
             $table->text('content');
-            $table->string('image');
+            $table->integer('author');
             $table->timestamps();
             $table->softDeletes();
         });
